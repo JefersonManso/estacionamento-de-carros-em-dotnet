@@ -81,9 +81,7 @@ public class Estacionamento
 - # 🛠️ Tecnologias Utilizadas
 - # 🗂️ Estrutura de Pastas
 - # 📄 Licença
-+ ## 🛠️ Tecnologias Utilizadas
-+ ## 🗂️ Estrutura de Pastas
-+ ## 📄 Licença
+
 
 
 ---
