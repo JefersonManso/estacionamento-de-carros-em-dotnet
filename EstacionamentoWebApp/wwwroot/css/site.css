@@ -1,0 +1,129 @@
+/* Corpo da página */
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    background:
+      linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url('/imagens/imagem_fundo.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #f0f0f0;
+    margin: 0;
+    padding-top: 100px; /* espaço para navbar fixa */
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+
+
+
+/* Navbar fixa no topo */
+nav.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #222831;
+    padding: 0.8rem 1rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+    z-index: 999;
+    display: flex;
+    justify-content: center;
+}
+
+nav.navbar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 2rem;
+}
+
+nav.navbar ul li a {
+    color: #eeeeee;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+nav.navbar ul li a:hover,
+nav.navbar ul li a:focus {
+    background-color: #5e00b573;
+    color: #222831;
+    outline: none;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+
+
+/* Container principal */
+.main-content {
+    background: rgba(255, 255, 255, 0.95);
+    max-width: 700px;
+    width: 90%;
+    padding: 2.5rem 3rem;
+    border-radius: 12px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    color: #2c3e50;
+    margin: 0 auto 3rem auto; /* margem superior 0, horizontal auto (centraliza), inferior 3rem */
+}
+
+/* Títulos */
+.main-content h1 {
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    font-size: 2.5rem;
+    color: #34495e;
+}
+
+.main-content a {
+    display: inline-block;
+    margin: 12px 10px;
+    padding: 10px 20px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #ffffff;
+    background: linear-gradient(135deg, #00b894, #00cec9);
+    border: none;
+    border-radius: 8px;
+    text-decoration: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.main-content a:hover,
+.main-content a:focus {
+    background: linear-gradient(135deg, #0984e3, #6c5ce7);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
+    outline: none;
+}
+
+
+
+/* Lista de veículos */
+.main-content ul.veiculos {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+    color: #555;
+    font-size: 1.1rem;
+    list-style-type: none;
+    padding-left: 0;
+}
+

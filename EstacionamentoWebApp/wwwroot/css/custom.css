@@ -1,0 +1,63 @@
+:root {
+    --cor-principal: #795e15ad;
+    --cor-principal-escura: #5f4a0f8a; /* tom mais escuro */
+    --cor-texto: #fff;
+}
+
+/* Body com background suave da cor */
+body {
+    background-color: var(--cor-principal);
+    color: var(--cor-texto);
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar estilizada */
+.navbar, .navbar-nav .nav-link {
+    background-color: var(--cor-principal);
+    color: var(--cor-texto) !important;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: var(--cor-principal-escura);
+    color: var(--cor-texto) !important;
+}
+
+/* Botões */
+.btn-primary {
+    background-color: var(--cor-principal);
+    border-color: var(--cor-principal);
+    color: var(--cor-texto);
+}
+
+.btn-primary:hover {
+    background-color: var(--cor-principal-escura);
+    border-color: var(--cor-principal-escura);
+    color: var(--cor-texto);
+}
+
+/* Form inputs */
+.form-control {
+    border: 1px solid var(--cor-principal);
+    background-color: #fff8dc; /* cor clara para contraste */
+    color: #333;
+}
+
+.form-control:focus {
+    border-color: var(--cor-principal-escura);
+    box-shadow: 0 0 5px var(--cor-principal-escura);
+    outline: none;
+}
+
+/* Títulos */
+h1, h2, h3, h4, h5 {
+    color: var(--cor-principal);
+}
+
+/* Links padrão */
+a {
+    color: var(--cor-principal);
+}
+
+a:hover {
+    color: var(--cor-principal-escura);
+}

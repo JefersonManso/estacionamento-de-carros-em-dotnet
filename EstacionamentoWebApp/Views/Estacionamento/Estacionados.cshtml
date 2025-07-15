@@ -1,0 +1,22 @@
+@{
+    ViewData["Title"] = "Veículos Estacionados";
+    var veiculos = Model as List<string>;
+}
+
+<h2>Veículos Estacionados</h2>
+
+@if (veiculos != null && veiculos.Any())
+{
+    <ul>
+        @foreach (var placa in veiculos)
+        {
+            <li>@placa</li>
+        }
+    </ul>
+}
+else
+{
+    <p>Nenhum veículo está estacionado no momento.</p>
+}
+
+<a href="@Url.Action("Index", "Estacionamento")" class="btn btn-primary mt-3">Voltar ao início</a>

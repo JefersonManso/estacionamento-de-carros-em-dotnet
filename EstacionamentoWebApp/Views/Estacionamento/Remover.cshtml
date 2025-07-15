@@ -1,0 +1,24 @@
+@{
+    ViewData["Title"] = "Remover Veículo";
+}
+
+<h2>Remover Veículo</h2>
+
+<form method="post" asp-action="Remover">
+    <div class="form-group">
+        <label for="placa">Placa:</label>
+        <input type="text" id="placa" name="placa" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <label for="valorPago">Valor pago (R$):</label>
+        <input type="text" id="valorPago" name="valorPago" class="form-control" placeholder="Ex: 15,50" required />
+    </div>
+
+    <button type="submit" class="btn btn-danger mt-3">Remover</button>
+</form>
+
+@if (ViewBag.Erro != null)
+{
+    <p class="text-danger mt-2">@ViewBag.Erro</p>
+}

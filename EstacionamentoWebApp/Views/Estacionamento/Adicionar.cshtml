@@ -1,0 +1,21 @@
+@{
+    ViewData["Title"] = "Adicionar Veículo";
+}
+
+<h2>Adicionar Veículo</h2>
+
+<form method="post" asp-action="Adicionar">
+    <label>Placa:</label>
+    <input type="text" name="placa" required />
+    <button type="submit">Salvar</button>
+</form>
+
+@if (!ViewData.ModelState.IsValid)
+{
+    <ul style="color:red;">
+        @foreach (var error in ViewData.ModelState.Values.SelectMany(v => v.Errors))
+        {
+            <li>@error.ErrorMessage</li>
+        }
+    </ul>
+}

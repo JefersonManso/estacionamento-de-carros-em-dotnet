@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Remoção";
+}
+
+<h2>Veículo removido com sucesso!</h2>
+
+<p><strong>Placa:</strong> @ViewBag.Placa</p>
+
+<p>
+    <strong>Entrada:</strong> @(ViewBag.Entrada != null 
+        ? ((DateTime)ViewBag.Entrada).ToString("dd/MM/yyyy HH:mm:ss") 
+        : "Não registrada")
+</p>
+
+<p>
+    <strong>Saída:</strong> @(ViewBag.Saida != null 
+        ? ((DateTime)ViewBag.Saida).ToString("dd/MM/yyyy HH:mm:ss") 
+        : "Não registrada")
+</p>
+
+<p><strong>Tempo:</strong> @ViewBag.Horas hora(s)</p>
+<p><strong>Total:</strong> @(((decimal)ViewBag.Total).ToString("C", System.Globalization.CultureInfo.GetCultureInfo("pt-BR")))</p>
+<p><strong>Troco:</strong> @(((decimal)ViewBag.Troco).ToString("C", System.Globalization.CultureInfo.GetCultureInfo("pt-BR")))</p>
+
+
+
+
+<a href="@Url.Action("Index", "Estacionamento")" class="btn btn-primary mt-3">Voltar ao início</a>

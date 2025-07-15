@@ -1,38 +1,135 @@
-# DIO - Trilha .NET - Fundamentos
-www.dio.me
+# 🚗 EstacionamentoWebApp
 
-## Desafio de projeto
-Para este desafio, você precisará usar seus conhecimentos adquiridos no módulo de fundamentos, da trilha .NET da DIO.
+Sistema desenvolvido com base no desafio da [DIO](https://www.dio.me) para gerenciamento de estacionamento, utilizando **ASP.NET Core MVC**.
 
-## Contexto
-Você foi contratado para construir um sistema para um estacionamento, que será usado para gerenciar os veículos estacionados e realizar suas operações, como por exemplo adicionar um veículo, remover um veículo (e exibir o valor cobrado durante o período) e listar os veículos.
+---
 
-## Proposta
-Você precisará construir uma classe chamada "Estacionamento", conforme o diagrama abaixo:
-![Diagrama de classe estacionamento](diagrama_classe_estacionamento.png)
+## 📚 Desafio Original - DIO Trilha .NET (Fundamentos)
 
-A classe contém três variáveis, sendo:
+Construa um sistema para gerenciar veículos estacionados:
 
-**precoInicial**: Tipo decimal. É o preço cobrado para deixar seu veículo estacionado.
+- ✅ Adicionar veículo  
+- ✅ Remover veículo (com cálculo de horas e valor total)  
+- ✅ Listar veículos
 
-**precoPorHora**: Tipo decimal. É o preço por hora que o veículo permanecer estacionado.
+### 🎯 Objetivo
 
-**veiculos**: É uma lista de string, representando uma coleção de veículos estacionados. Contém apenas a placa do veículo.
+Simular um estacionamento real com controle de entradas, saídas e cálculo de valores com base no seguinte diagrama:
 
-A classe contém três métodos, sendo:
+![Diagrama de classe estacionamento](EstacionamentoWebApp/docs/imagens/diagrama_classe_estacionamento.png)
 
-**AdicionarVeiculo**: Método responsável por receber uma placa digitada pelo usuário e guardar na variável **veiculos**.
+---
 
-**RemoverVeiculo**: Método responsável por verificar se um determinado veículo está estacionado, e caso positivo, irá pedir a quantidade de horas que ele permaneceu no estacionamento. Após isso, realiza o seguinte cálculo: **precoInicial** * **precoPorHora**, exibindo para o usuário.
+## 🧪 Testes Realizados no Console
 
-**ListarVeiculos**: Lista todos os veículos presentes atualmente no estacionamento. Caso não haja nenhum, exibir a mensagem "Não há veículos estacionados".
+| Cadastro de Veículo | Remoção com Cálculo |
+|---------------------|---------------------|
+| ![01](EstacionamentoWebApp/docs/imagens/01.png) | ![02](EstacionamentoWebApp/docs/imagens/02.png) |
+| ![03](EstacionamentoWebApp/docs/imagens/03.png) | ![04](EstacionamentoWebApp/docs/imagens/04.png) |
+| ![05](EstacionamentoWebApp/docs/imagens/05.png) | ![06](EstacionamentoWebApp/docs/imagens/06.png) |
+| ![07](EstacionamentoWebApp/docs/imagens/07.png) | ![08](EstacionamentoWebApp/docs/imagens/08.png) |
+| ![09](EstacionamentoWebApp/docs/imagens/09.png) | ![10](EstacionamentoWebApp/docs/imagens/10.png) |
+| ![11](EstacionamentoWebApp/docs/imagens/11.png) | ![12](EstacionamentoWebApp/docs/imagens/12.png) |
+| ![13](EstacionamentoWebApp/docs/imagens/13.png) | ![14](EstacionamentoWebApp/docs/imagens/14.png) |
+| ![15](EstacionamentoWebApp/docs/imagens/15.png) | ![16](EstacionamentoWebApp/docs/imagens/16.png) |
+| ![17](EstacionamentoWebApp/docs/imagens/17.png) | ![25](EstacionamentoWebApp/docs/imagens/25.png) |
 
-Por último, deverá ser feito um menu interativo com as seguintes ações implementadas:
-1. Cadastrar veículo
-2. Remover veículo
-3. Listar veículos
-4. Encerrar
+---
+
+## 💻 Evolução para Web com ASP.NET MVC
+
+Este projeto evoluiu para uma aplicação web funcional com Razor Pages, Bootstrap e layout responsivo.
+
+### 🖼️ Prints da Interface Web
+
+| Página Inicial | Adicionar Veículo |
+|----------------|-------------------|
+| ![Home](EstacionamentoWebApp/docs/imagens/18.png) | ![Adicionar](EstacionamentoWebApp/docs/imagens/19.png) |
+
+| Remover Veículo | Recibo (com troco) |
+|------------------|--------------------|
+| ![Remover](EstacionamentoWebApp/docs/imagens/20.png) | ![Recibo](EstacionamentoWebApp/docs/imagens/21.png) |
+
+| Lista de Estacionados | Remoções |
+|------------------------|----------|
+| ![Estacionados](EstacionamentoWebApp/docs/imagens/22.png) | ![Remoção](EstacionamentoWebApp/docs/imagens/23.png) |
+|                        | ![Remoção 2](EstacionamentoWebApp/docs/imagens/24.png) |
+
+---
+
+## 🧱 Estrutura da Classe Principal
+
+```csharp
+public class Estacionamento
+{
+    private decimal precoInicial;
+    private decimal precoPorHora;
+    private List<string> veiculos;
+
+    public bool AdicionarVeiculo(string placa) { ... }
+
+    public (decimal valorTotal, int horas, DateTime entrada, DateTime saida, decimal troco)?
+        RemoverVeiculo(string placa, decimal valorPago) { ... }
+
+    public List<string> ListarVeiculos() { ... }
+}
+
+```
+
+---
+
+- # 🛠️ Tecnologias Utilizadas
+- # 🗂️ Estrutura de Pastas
+- # 📄 Licença
++ ## 🛠️ Tecnologias Utilizadas
++ ## 🗂️ Estrutura de Pastas
++ ## 📄 Licença
 
 
-## Solução
-O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+---
+
+# 🗂️ Estrutura de Pastas
+
+```bash
+EstacionamentoWebApp/
+├── Controllers/
+│   └── EstacionamentoController.cs
+├── Models/
+│   └── Estacionamento.cs
+├── Views/
+│   └── Estacionamento/
+│       ├── Index.cshtml
+│       ├── Adicionar.cshtml
+│       ├── Remover.cshtml
+│       ├── Removido.cshtml
+│       └── Estacionados.cshtml
+├── imagens/
+│   ├── console-adicionar.png
+│   ├── console-remover.png
+│   ├── web-home.png
+│   ├── web-adicionar.png
+│   ├── web-remover.png
+│   ├── web-removido.png
+│   └── web-estacionados.png
+├── wwwroot/
+│   └── css/site.css (estilização personalizada)
+└── README.md
+```
+---
+# 📄 Licença
+Este projeto foi desenvolvido para fins educacionais no contexto do bootcamp DIO. Livre para aprendizado e melhoria.
+
+
+---
+
+### 🔍 O que foi melhorado:
+
+| Item | Antes | Depois |
+|------|-------|--------|
+| Imagens | Muitos títulos longos | Nomes curtos, layout mais limpo |
+| Cabeçalhos | Sem padrão claro | Hierarquia de títulos mantida |
+| Estrutura de pastas | `imagens/` fora de `docs` | Centralizado em `docs/imagens/` |
+| Licença | Ausente | Adicionada (opcional, mas recomendada) |
+| Diagrama | Com legenda redundante | Mais direto e fluido |
+
+
