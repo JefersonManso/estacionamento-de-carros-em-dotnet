@@ -42,18 +42,18 @@ Este projeto evoluiu para uma aplicação web funcional com Razor Pages, Bootstr
 
 ### 🖼️ Prints da Interface Web
 
-| Página Inicial | Adicionar Veículo |
-|----------------|-------------------|
+| Página Inicial    | Adicionar Veículo  |
+|-------------------|--------------------|
 | ![Home](EstacionamentoWebApp/docs/imagens/18.png) | ![Adicionar](EstacionamentoWebApp/docs/imagens/19.png) |
 
-| Remover Veículo | Recibo (com troco) |
-|------------------|--------------------|
+| Remover Veículo   | Veículo Cadastrado (Recibo) |
+|-------------------|-----------------------------|
 | ![Remover](EstacionamentoWebApp/docs/imagens/20.png) | ![Recibo](EstacionamentoWebApp/docs/imagens/21.png) |
 
-| Lista de Estacionados | Remoções |
-|------------------------|----------|
+| Lista de Estacionados | Remoções e Pagamento  |
+|-----------------------|----------------------|
 | ![Estacionados](EstacionamentoWebApp/docs/imagens/22.png) | ![Remoção](EstacionamentoWebApp/docs/imagens/23.png) |
-|                        | ![Remoção 2](EstacionamentoWebApp/docs/imagens/24.png) |
+|                       | ![Remoção 2](EstacionamentoWebApp/docs/imagens/24.png) |
 
 ---
 
