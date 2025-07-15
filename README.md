@@ -46,8 +46,8 @@ Este projeto evoluiu para uma aplicação web funcional com Razor Pages, Bootstr
 |-------------------|--------------------|
 | ![Home](EstacionamentoWebApp/docs/imagens/18.png) | ![Adicionar](EstacionamentoWebApp/docs/imagens/19.png) |
 
-| Remover Veículo   | Veículo Cadastrado (Recibo) |
-|-------------------|-----------------------------|
+| Adicionando Veículo   | Veículo Cadastrado (Recibo) |
+|-----------------------|-----------------------------|
 | ![Remover](EstacionamentoWebApp/docs/imagens/20.png) | ![Recibo](EstacionamentoWebApp/docs/imagens/21.png) |
 
 | Lista de Estacionados | Remoções e Pagamento  |
