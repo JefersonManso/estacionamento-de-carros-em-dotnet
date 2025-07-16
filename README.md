@@ -89,18 +89,6 @@ public class Estacionamento
 - CSS3
 - HTML5
 
-# 🗂️ Estrutura de Pastas
-
-- /Controllers: Controladores MVC
-- /Models: Classes de modelo
-- /Views: Arquivos de visualização (HTML + Razor)
-- /wwwroot: Arquivos estáticos (CSS, JS, imagens)
-
-# 📄 Licença
-
-Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
-
-
 
 
 ---
@@ -127,10 +115,13 @@ EstacionamentoWebApp/
 │   ├── web-adicionar.png
 │   ├── web-remover.png
 │   ├── web-removido.png
-│   └── web-estacionados.png
+│   ├── web-estacionados.png
+│   └── imagem_fundo.png
 ├── wwwroot/
-│   └── css/site.css (estilização personalizada)
+│   └── css/
+│       └── site.css  (estilização personalizada)
 └── README.md
+
 ```
 ---
 # 📄 Licença
