@@ -1,23 +1,31 @@
 @{
+    // Define o título da página que será exibido no layout (_Layout.cshtml)
     ViewData["Title"] = "Remover Veículo";
 }
 
+<!-- Título principal da página -->
 <h2>Remover Veículo</h2>
 
+<!-- Formulário que envia os dados via POST para a action "Remover" do controller Estacionamento -->
 <form method="post" asp-action="Remover">
+
+    <!-- Campo para digitar a placa do veículo -->
     <div class="form-group">
         <label for="placa">Placa:</label>
         <input type="text" id="placa" name="placa" class="form-control" required />
     </div>
 
+    <!-- Campo para digitar o valor pago pelo cliente -->
     <div class="form-group">
         <label for="valorPago">Valor pago (R$):</label>
         <input type="text" id="valorPago" name="valorPago" class="form-control" placeholder="Ex: 15,50" required />
     </div>
 
+    <!-- Botão para submeter o formulário e processar a remoção -->
     <button type="submit" class="btn btn-danger mt-3">Remover</button>
 </form>
 
+<!-- Caso haja erro (ex: placa não encontrada ou valor inválido), exibe a mensagem -->
 @if (ViewBag.Erro != null)
 {
     <p class="text-danger mt-2">@ViewBag.Erro</p>

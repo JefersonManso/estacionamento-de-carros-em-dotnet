@@ -6,6 +6,7 @@
 
 /* Body com background suave da cor */
 body {
+    
     background-color: var(--cor-principal);
     color: var(--cor-texto);
     font-family: Arial, sans-serif;
@@ -28,6 +29,7 @@ body {
     border-color: var(--cor-principal);
     color: var(--cor-texto);
 }
+
 
 .btn-primary:hover {
     background-color: var(--cor-principal-escura);

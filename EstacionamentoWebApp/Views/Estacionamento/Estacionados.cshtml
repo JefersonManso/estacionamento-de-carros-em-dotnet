@@ -1,5 +1,7 @@
 @{
+    // Define o título da página, utilizado no layout (_Layout.cshtml)
     ViewData["Title"] = "Veículos Estacionados";
+    // Converte o model recebido para uma lista de strings (placas de veículos)
     var veiculos = Model as List<string>;
 }
 
@@ -7,6 +9,7 @@
 
 @if (veiculos != null && veiculos.Any())
 {
+     // Exibe cada placa como item de lista
     <ul>
         @foreach (var placa in veiculos)
         {
@@ -16,6 +19,7 @@
 }
 else
 {
+    // Caso a lista esteja vazia ou nula, exibe mensagem de vazio
     <p>Nenhum veículo está estacionado no momento.</p>
 }
 

@@ -1,57 +1,70 @@
 ﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
 for details on configuring this project to bundle and minify static web assets. */
+
+/* Estiliza o nome/logo do site na navbar */
 a.navbar-brand {
   white-space: normal;
   text-align: center;
   word-break: break-all;
 }
 
+/* Estilo padrão para todos os links */
 a {
   color: #00ffcc;
   text-decoration: none;
 }
 
+/* Estilo ao passar o mouse sobre os links */
 a:hover {
   color: #00ffaa;
   text-decoration: underline;
 }
 
+/* Estilo personalizado para botões com a classe .btn-primary */
 .btn-primary {
   background-color: #d35a2294 !important; /* verde, pode trocar */
   border-color: #b44012 !important;
   color: #fff !important;
 }
 
+/* Estilo para o botão .btn-primary quando o mouse passa por cima */
 .btn-primary:hover {
   background-color: #388e3c !important;
   border-color: #2e7031 !important;
   color: #fff !important;
 }
 
-
+/* Estilo para navegação com abas (nav-pills) quando ativa */
 .nav-pills .nav-link.active, .nav-pills .show > .nav-link {
   color: #fff;
   background-color: #1b6ec2;
   border-color: #1861ac;
 }
 
+/* Borda superior cinza claro */
 .border-top {
   border-top: 1px solid #e5e5e5;
 }
 
+/* Borda inferior cinza claro */
 .border-bottom {
   border-bottom: 1px solid #e5e5e5;
 }
 
+/* Sombra sutil para elementos (ex: navbar) */
 .box-shadow {
   box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
 }
 
+
+/* Estilo para o botão de aceitar política de cookies */
 button.accept-policy {
   font-size: 1rem;
   line-height: inherit;
 }
 
+
+/* Estilo para o rodapé */
 .footer {
   position: absolute;
   bottom: 0;

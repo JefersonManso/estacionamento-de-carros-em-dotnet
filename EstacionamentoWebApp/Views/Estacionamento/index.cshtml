@@ -1,21 +1,23 @@
 @{
+    // Define o título da página que será usado no layout (_Layout.cshtml)
     ViewData["Title"] = "Bem-vindo";
 }
-
+<!-- Container com espaçamento superior (margin-top) -->
 <div class="container mt-5">
-
+    <!-- Título centralizado, em caixa alta, negrito -->
     <h1 class="mb-4 text-center text-uppercase fw-bold">Bem-vindo ao Estacionamento</h1>
-
+    <!-- Layout responsivo com botões empilhados em telas pequenas e lado a lado em telas médias+ -->
     <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
 
+        <!-- Botão verde para cadastrar um novo veículo -->
         <a href="@Url.Action("Adicionar", "Estacionamento")" class="btn btn-success btn-lg">
             🚗 Cadastrar veículo
         </a>
-
+        <!-- Botão vermelho para remover um veículo (irá para a tela onde se informa a placa e valor pago) -->
         <a href="@Url.Action("Remover", "Estacionamento")" class="btn btn-danger btn-lg">
             🧾 Remover veículo
         </a>
-
+        <!-- Botão azul para ver a lista de veículos atualmente estacionados -->
         <a href="@Url.Action("Estacionados", "Estacionamento")" class="btn btn-primary btn-lg">
             📋 Ver veículos estacionados
         </a>

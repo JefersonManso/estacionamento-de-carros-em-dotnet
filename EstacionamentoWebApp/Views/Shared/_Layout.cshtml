@@ -2,34 +2,63 @@
 <html lang="pt-br">
 <head>
     <meta charset="utf-8" />
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Define o título da página dinamicamente com base em ViewData["Title"] -->
     <title>@ViewData["Title"] - VagaCerta</title>
+
+    <!-- Link para a biblioteca de ícones Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+    <!-- Link para o CSS do Bootstrap e outros estilos -->
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <!-- CSS customizado do site com cache busting ativado -->    
     <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+
+    <!-- CSS específico do projeto EstacionamentoWebApp com cache busting -->
+
     <link rel="stylesheet" href="~/EstacionamentoWebApp.styles.css" asp-append-version="true" />
+    
+    <!-- CSS custom adicional com cache busting -->
     <link rel="stylesheet" href="~/css/custom.css" asp-append-version="true" />
 </head>
 <body>
+    <!-- Cabeçalho da página com barra de navegação -->
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container-fluid">
+
+                <!-- Marca (logo) que leva para a página inicial do Estacionamento -->
                 <a class="navbar-brand" asp-area="" asp-controller="Estacionamento" asp-action="Index">VagaCerta</a>
+
+                <!-- Botão de alternância para dispositivos móveis -->
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" 
                     aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
+
+                <!-- Barra de navegação colapsável -->
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
+
+                        <!-- Link para a página inicial -->
                         <li class="nav-item">
                             <a class="nav-link text-dark" asp-controller="Estacionamento" asp-action="Index">Início</a>
                         </li>
+
+                         <!-- Link para página de cadastro -->
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Estacionamento" asp-action="Adicionar">Cadastrar</a>
                         </li>
+
+                        <!-- Link para página de remoção -->
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Estacionamento" asp-action="Remover">Remover</a>
                         </li>
+
+                        <!-- Link para página de consulta -->
                        
                         <li class="nav-item">
                             <a class="nav-link" asp-controller="Home" asp-action="Contact">Contato</a>
@@ -40,23 +69,35 @@
         </nav>
     </header>
 
+
+    <!-- Conteúdo principal da página -->
     <div class="container">
         <main role="main" class="pb-3">
-            @RenderBody()
+            @RenderBody() <!-- Aqui será injetado o conteúdo das views -->
         </main>
     </div>
 
+
+    <!-- Rodapé da página -->
    <footer class="border-top footer text-muted text-center py-3">
     <div class="container">
-        &copy; 2025 - VagaCerta - 
+        &copy; 2025 - VagaCerta -
+         <!-- Link para página de contato --> 
         <a asp-controller="Home" asp-action="Contact" class="text-decoration-none">Contato</a>
     </div>
    </footer>
 
+    <!-- Scripts JavaScript necessários -->
 
+    <!-- jQuery local -->
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
+
+    <!-- Bootstrap JavaScript com dependências -->
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Script personalizado do site -->
     <script src="~/js/site.js" asp-append-version="true"></script>
+
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

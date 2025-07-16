@@ -1,17 +1,22 @@
 @{
+    // Define o título da página, usado no layout padrão
     ViewData["Title"] = "Remoção";
 }
 
+
 <h2>Veículo removido com sucesso!</h2>
 
+<!-- Exibe a placa do veículo removido -->
 <p><strong>Placa:</strong> @ViewBag.Placa</p>
 
+<!-- Exibe a data e hora de entrada formatada, ou mensagem caso não registrada -->
 <p>
     <strong>Entrada:</strong> @(ViewBag.Entrada != null 
         ? ((DateTime)ViewBag.Entrada).ToString("dd/MM/yyyy HH:mm:ss") 
         : "Não registrada")
 </p>
 
+<!-- Exibe a data e hora de saída formatada, ou mensagem caso não registrada -->
 <p>
     <strong>Saída:</strong> @(ViewBag.Saida != null 
         ? ((DateTime)ViewBag.Saida).ToString("dd/MM/yyyy HH:mm:ss") 
