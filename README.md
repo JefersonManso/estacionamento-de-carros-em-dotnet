@@ -22,8 +22,10 @@ Simular um estacionamento real com controle de entradas, saídas e cálculo de v
 
 ## 🧪 Testes Realizados no Console
 
-| Cadastro de Veículo | Remoção com Cálculo |
-|---------------------|---------------------|
+Os testes abaixo demonstram dois fluxos distintos de **cadastro e remoção** de veículos no sistema via console.
+
+| Fluxo 1 | Fluxo 2 |
+|---------|---------|
 | ![01](EstacionamentoWebApp/docs/imagens/01.png) | ![02](EstacionamentoWebApp/docs/imagens/02.png) |
 | ![03](EstacionamentoWebApp/docs/imagens/03.png) | ![04](EstacionamentoWebApp/docs/imagens/04.png) |
 | ![05](EstacionamentoWebApp/docs/imagens/05.png) | ![06](EstacionamentoWebApp/docs/imagens/06.png) |
@@ -33,6 +35,7 @@ Simular um estacionamento real com controle de entradas, saídas e cálculo de v
 | ![13](EstacionamentoWebApp/docs/imagens/13.png) | ![14](EstacionamentoWebApp/docs/imagens/14.png) |
 | ![15](EstacionamentoWebApp/docs/imagens/15.png) | ![16](EstacionamentoWebApp/docs/imagens/16.png) |
 | ![17](EstacionamentoWebApp/docs/imagens/17.png) | ![25](EstacionamentoWebApp/docs/imagens/25.png) |
+
 
 ---
 
@@ -78,9 +81,25 @@ public class Estacionamento
 
 ---
 
-- # 🛠️ Tecnologias Utilizadas
-- # 🗂️ Estrutura de Pastas
-- # 📄 Licença
+# 🛠️ Tecnologias Utilizadas
+
+- C#
+- ASP.NET Core MVC
+- Bootstrap 5
+- CSS3
+- HTML5
+
+# 🗂️ Estrutura de Pastas
+
+- /Controllers: Controladores MVC
+- /Models: Classes de modelo
+- /Views: Arquivos de visualização (HTML + Razor)
+- /wwwroot: Arquivos estáticos (CSS, JS, imagens)
+
+# 📄 Licença
+
+Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
+
 
 
 
